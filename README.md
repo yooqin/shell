@@ -11,12 +11,13 @@
 ### shell文件介绍
 
 每个shell文件都第一行都是命令解释器的声明，#!声明是一个可执行的脚本
-＃！/ bin / sh 
-＃！/ bin / bash 
-＃！/ usr / bin / perl 
-＃！/ usr / bin / tcl 
-＃！/ bin / sed -f 
-＃！/ bin / awk -f
+
+    ＃！/ bin / sh 
+    ＃！/ bin / bash 
+    ＃！/ usr / bin / perl 
+    ＃！/ usr / bin / tcl 
+    ＃！/ bin / sed -f 
+    ＃！/ bin / awk -f
 
 ### 基础知识
 
