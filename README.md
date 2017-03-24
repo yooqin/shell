@@ -23,11 +23,11 @@
 ### 特殊字符
 
 1. #注释符(comments):shell只能注释一行
+
     echo "The # here does not begin a comment."
     echo 'The # here does not begin a comment.'
     echo The \# here does not begin a comment.
     echo The # here begins a comment.
-
     echo ${PATH#*:}       # Parameter substitution, not a comment. 参数替换
     echo $(( 2#101011 ))  # Base conversion, not a comment.进制转换
     以上分别输出:
