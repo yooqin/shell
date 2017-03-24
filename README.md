@@ -21,6 +21,25 @@
 
 ### 基础
 ### 特殊字符
+
+1. #注释符(comments):shell只能注释一行
+    echo "The # here does not begin a comment."
+    echo 'The # here does not begin a comment.'
+    echo The \# here does not begin a comment.
+    echo The # here begins a comment.
+
+    echo ${PATH#*:}       # Parameter substitution, not a comment. 参数替换
+    echo $(( 2#101011 ))  # Base conversion, not a comment.进制转换
+    以上分别输出:
+    The # here does note begin a comment.
+    The # here does note begin a comment.
+    The # here does note begin a comment.
+    The #
+
+2.;命令分割符(command separator):在同一行分割多个命令 
+    ls;ll
+
+
 ### 变量和参数
 ### 引用
 ### 退出和退出状态
