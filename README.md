@@ -32,6 +32,7 @@
 
 
 ## 代码对照
+
 1. clean_up.sh 清理一个log日志文件
 2. note.sh 显示命令行提示
 3. more.sh 关于一个more的执行
