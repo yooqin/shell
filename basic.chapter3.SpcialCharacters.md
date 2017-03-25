@@ -177,11 +177,11 @@
 
 22. (()) 整数的扩展
 
-23. >  &>  >&  >>  <  <>重定向 
+23. >、&>、>&、>>、<、<>重定向 
 
 - 重定向加数字(0:标准输入stdin 1:标准输出stdout 2:标准错误stderr)如ls a.txt b.txt 1>file.out 2>file.err,文件b.txt不存在，则file.out内容为a.txt file.err内容为not found b.txt;通常情况下默认为1>xx 1省略 
 
-- >重定向文件， cat xx.log > a.log
+- >重定向文件cat xx.log > a.log
 
 - &>意思是把标准输出和标准错误输出都重定向到文件filename中,通常抑制输出是这样做 type unkonw_command &>/dev/null; echo $?
 
