@@ -11,12 +11,12 @@ echo $variable 或 ${variable}
 ## 变量分配
 - =分配操作符号，两边不能有空格
 - 变量分配的几种方式
- 1. a=897 普通赋值
- 2. let a=16+5 let赋值
- 3. for a in 7 8 9 10 do done  循环赋值
- 4. read a 输入数据赋值
- 5. a=`ls -l` 命令行赋值
- 6. a=$(cat /etc/a.log) 使用$()执行命令结果，比``更新
+    1. a=897 普通赋值
+    2. let a=16+5 let赋值
+    3. for a in 7 8 9 10 do done  循环赋值
+    4. read a 输入数据赋值
+    5. a=`ls -l` 命令行赋值
+    6. a=$(cat /etc/a.log) 使用$()执行命令结果，比``更新
 
 ## 变量基础
 - bash与其他编程语言不同bash的变量类型通常都是string类型，bash会根据上下文判断变量的类型，比如算术运算
