@@ -2,6 +2,13 @@
 
 #验证base参数是否正确，并提示应该输入的内容
 
+sleep 10
+
+echo hello
+sleep 30
+echo llll
+exit 0
+
 E_WRONG_ARGS=85
 script_parameters="-a -h -m -z"
 
