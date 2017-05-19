@@ -1,0 +1,38 @@
+#!/bin/sh
+# --- Command line
+refname="$1"
+oldrev="$2"
+newrev="$3"
+
+access_user="/opt/git/aggrgation.git/hooks/pushuser.log"
+
+pushuser=`git cat-file -p $newrev | egrep -io "^author [a-z0-9]*"`
+checkuser=`grep -c "$pushuser" $access_user`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@@@@@@@@@@@@@ check $pushuser @@@@@@@@@@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo $checkuser
+
+if [ "$checkuser" = "" ] 
+then
+    checkuser=0
+fi
+
+if [ "$checkuser" = "0" ] 
+then
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~$pushuser没有git push 权限"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    echo "~~~~(>_<)~~~~ ~~~~(>_<)~~~~ ~~~~(>_<)~~~~"
+    exit 1
+else
+    echo "Success"
+fi
