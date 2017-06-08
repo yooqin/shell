@@ -1,0 +1,11 @@
+
+.box-qin-top{width: 1000px; margin: 0px auto; height: auto;}
+
+.qin-nav{width:100%; height: 40px; background-color: #393D49; border-bottom:2px solid #5FB878;}
+
+	.qin-nav .w1000{width: 1000px; margin: 0px auto;}
+	.qin-nav .nav-left{width: 200px; font-size:12px; color:#5fb878;float:left; line-height: 40px;}
+	.qin-nav ul{height: auto; margin: 0px; padding: 0px; float: right;}
+	.qin-nav ul li{padding: 0 20px; float: left; line-height: 40px; }
+	.qin-nav ul li a{color: #c2c2c2;}
+	.qin-nav ul li a:hover{color: #fff;}
