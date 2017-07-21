@@ -797,3 +797,5 @@ if ($var_wupin ~ '1') {
     rewrite ^/wu/$ /html/zhuanti/secondmarket.$var_wupin_city/index.html last;
 }
 ```
+
+# Nginx模块开发
